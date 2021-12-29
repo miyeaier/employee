@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import EmployeeModal from "./EmployeeModal";
 import { Item } from "semantic-ui-react";
 
 class EmployeeList extends Component {
@@ -32,6 +33,9 @@ class EmployeeList extends Component {
             <Item.Header ClassName="name">
               {employee.first_name} {employee.last_name}
             </Item.Header>
+            <Item.Extra>
+              <EmployeeModal id={employee.id} />
+            </Item.Extra>
             </Item.Content>
         </Item>
       );
